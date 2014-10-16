@@ -1,0 +1,35 @@
+puppetserver:
+  image: ahmet2mir/puppetserver
+  hostname: puppetserver.vm.local
+  ports:
+    - "8140:8140"
+
+puppetagent01:
+  image: ahmet2mir/puppetagent
+  hostname: puppetagent01.vm.local
+  # links:
+  #   - puppetserver:pp
+  environment: 
+    PUPPETSERVER: "puppetserver.vm.local"
+
+puppetagent02:
+  image: ahmet2mir/puppetagent
+  hostname: puppetagent02.vm.local
+  # links:
+  #   - puppetserver:pp
+  environment: 
+    PUPPETSERVER: "puppetserver.vm.local"
+
+puppetagent03:
+  image: ahmet2mir/puppetagent
+  hostname: puppetagent03.vm.local
+  # links:
+  #   - puppetserver:pp
+  environment: 
+    PUPPETSERVER: "puppetserver.vm.local"
+
+
+
+
+
+
